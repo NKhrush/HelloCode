@@ -9,16 +9,16 @@
 Console.WriteLine("START");
 int N;
 Console.WriteLine("Введите N ");
-// N = int.Parse(Console.ReadLine());
+N = int.Parse(Console.ReadLine());
+
 // N = Convert.ToInt32(Console.ReadLine());
-N = 5;
 
 int index;
 index = -N;
 
 while (index <= N)
 {
-    Console.WriteLine(index);
+    Console.Write(index + " ");
     index = index + 1;
 }
 
