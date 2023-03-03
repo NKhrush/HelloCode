@@ -4,38 +4,27 @@
 // 44 5 78 -> 78
 // 22 3 9 -> 22
 
-int a;
-int b;
-int c;
-int max;
-Console.WriteLine("Введите a ");
-a = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите b ");
-b = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите c ");
-c = int.Parse(Console.ReadLine());
 
-if (a > b)
+
+int Max(int number1, int number2, int number3)
 {
-    if (a > c)
-    {
-        max = a;
-    }
-    else
-    {
-        max = c;
-    }
-} 
-else
-{
-    if (b > c)
-    {
-        max = b;
-    }
-    else
-    {
-         max = c;
-    }
+    int result = number1;
+    if (number2 > result) result = number2;
+    if (number3 > result) result = number3;
+    return result;
 }
 
-Console.WriteLine(max);
+int number1;
+int number2;
+int number3;
+
+Console.WriteLine("Введите число 1 ");
+number1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите число 2 ");
+number2 = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите число 3 ");
+number3 = int.Parse(Console.ReadLine());
+
+int result = Max(number1, number2, number3);
+
+Console.WriteLine(result);
