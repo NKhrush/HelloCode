@@ -28,6 +28,8 @@ public static string Print(int[] array)
     return result;
 }
 
+// 4. запонение массива
+// 4.1 руками
 public static void FillByUser(int[] array)
 {
     int size = array.Length;
@@ -36,8 +38,28 @@ public static void FillByUser(int[] array)
 
     while (index < size)
     {
-        array[index] = GetNumber("Введите " + index + " эдемент: ");
+        array[index] = GetNumber("Введите " + index + " элемент: ");
         index++;
     }
+}
+
+
+// 5. перемешивание массива
+public static string GetMix(int[] array)
+{
+    string result = String.Empty;
+    int size = array.Length;
+    int index = 0;
+    int temp = 0;
+    while (index < size + 1 / 2)
+    {
+        temp = array[index];
+        array[index] = array[size - 1];
+        array[size - 1] = temp;
+        result = result + " " + array[index];
+        index = index + 2;
+        size = size - 1;
+    }
+    return result;
 }
 }

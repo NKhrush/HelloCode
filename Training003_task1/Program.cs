@@ -1,6 +1,6 @@
 ﻿using static Library;
 
-Math
+
 // Показать четные числа от 1 до N
 // 1. считать данные от пользователя
 // 2.  сформировать строку из четных чисел
@@ -45,8 +45,8 @@ System.Console.WriteLine(Print(numbers));
 FillByUser(numbers);
 System.Console.WriteLine(Print(numbers));
 
-// int[] mas = GetMix(numbers);
-// System.Console.WriteLine(Print(numbers));
+GetMix(numbers);
+System.Console.WriteLine(Print(numbers));
 
 // 4. запонение массива
 // 4.1 руками
