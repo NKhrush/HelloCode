@@ -35,8 +35,8 @@ using static ex001;
 // // 2. проверить, палиндром ли
 // // 3. вывести результат проверки
 
-// int number = GetNumber("Введите пятизначное число ");
-// Console.WriteLine (SearchArgs(number));
+int number = GetNumber("Введите пятизначное число ");
+Console.WriteLine (SearchArgs(number));
 
 
 // Задача 21
@@ -48,14 +48,14 @@ using static ex001;
 // // 2. рассчитать расстояние между ними
 // // 3. вывести результат
 
-// int arg1 = GetNumber("Введите координату x1: ");
-// int arg2 = GetNumber("Введите координату y1: ");
-// int arg3 = GetNumber("Введите координату z1: ");
-// int arg4 = GetNumber("Введите координату x2: ");
-// int arg5 = GetNumber("Введите координату y2: ");
-// int arg6 = GetNumber("Введите координату z2: ");
-// double result = Distance(arg1, arg2, arg3, arg4, arg5, arg6);
-// System.Console.Write("{0:0.00}", result);
+int arg1 = GetNumber("Введите координату x1: ");
+int arg2 = GetNumber("Введите координату y1: ");
+int arg3 = GetNumber("Введите координату z1: ");
+int arg4 = GetNumber("Введите координату x2: ");
+int arg5 = GetNumber("Введите координату y2: ");
+int arg6 = GetNumber("Введите координату z2: ");
+double result = Distance(arg1, arg2, arg3, arg4, arg5, arg6);
+System.Console.Write("{0:0.00}", result);
 
 // Задача 23
 // Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
