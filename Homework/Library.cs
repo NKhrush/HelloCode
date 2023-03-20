@@ -86,4 +86,57 @@ public class Library
         System.Console.WriteLine(text);
         return Convert.ToInt32(Console.ReadLine());
     }
+// 8
+    public static string SearchArgs(int number)
+    {
+        string result = String.Empty;
+        int arg1 = number / 10000;
+        int arg2 = number % 10;
+        int arg3 = number / 1000 % 10;
+        int arg4 = number / 100 % 10;
+        if (arg1 == arg2 || arg3 == arg4)
+            {
+               result = result + "Это палиндром!";
+               return result;
+            }
+         else 
+            {
+                result = result + "Это не палиндром :(";
+                return result;
+            }
+    }
+
+// 9
+    public static double Distance (int arg1, int arg2, int arg3, int arg4, int arg5, int arg6)
+    {
+        double D = Math.Pow(Math.Pow (arg4 - arg1, 2) +
+                            Math.Pow (arg5 - arg2, 2) +
+                            Math.Pow (arg6 - arg3, 2) , 0.5);
+        System.Console.Write("Расстояние между заданными координатами в 3D пространстве = ");
+        return D;
+    }
+
+//10
+
+    public static string Cubed(int N)
+    {
+        int count = 0;
+        int i = 1;
+        string result = String.Empty;
+        while (count < N)
+        {
+            result = result + i * i * i + " ";
+            count++;
+            i++;
+        }
+        return result;
+    }
+
+
+
+
+
+
+
+
 }
