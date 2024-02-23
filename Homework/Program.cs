@@ -68,6 +68,6 @@ System.Console.Write("{0:0.00}", result);
 // // 3. вывести результат
 
 int N = GetNumber("Введите число");
-string result = Cubed(N);
-System.Console.WriteLine(result); 
+string num = Cubed(N);
+System.Console.WriteLine(num); 
 
