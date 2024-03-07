@@ -26,7 +26,7 @@ public class Library
         return Convert.ToInt32(Console.ReadLine());
     }
 
-    // рандомное заполнение массива
+ 
 
 
 // 4. печать массива
@@ -133,6 +133,29 @@ public class Library
     }
 
 
+
+//11 Получить сумму цифр числа 
+int GetDigitsSum(int num)
+{
+    int sum = 0;
+    while (num > 0)
+    {
+        sum = sum + num % 10;
+        num = num / 10;
+    }
+    return sum;
+}
+
+// Проверить четность числа
+bool CheckParity(int sum)
+{
+    bool status = false;
+    if (sum % 2 == 0)
+    {
+        status = true;
+    }
+    return status;
+}
 
 
 
