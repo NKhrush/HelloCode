@@ -117,3 +117,84 @@
 
 // Задача 3: Напишите программу, которая перевернёт одномерный массив 
 // (первый элемент станет последним, второй – предпоследним и т.д.)
+
+int GetNumber(string text)
+{
+    System.Console.WriteLine(text);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
+int [] CreateArray(int size)
+{
+    return new int[size];
+}
+
+void FillByUser(int[] array)
+{
+    int size = array.Length;
+
+    int index = 0;
+
+    while (index < size)
+    {
+        array[index] = GetNumber("Введите " + index + " элемент: ");
+        index++;
+    }
+}
+
+string RevertArray(int[] array)
+    {
+        string result = String.Empty;
+        int size = array.Length;
+        int index = 0;
+        int temp = 0;
+        while (index < size + 1 / 2)
+        {
+            temp = array[index];
+            array[index] = array[size - 1];
+            array[size - 1] = temp;
+            result = result + " " + array[index] ;
+            index = index + 1;
+            size = size - 1;
+        }
+        return result;
+    }
+
+string Print(int[] array)
+{
+    string result = String.Empty;
+    int len = array.Length;
+    int index = 0;
+    while (index < len)
+    {
+        result = result + " " + array[index];
+        index++;
+    }
+
+    return result;
+}
+
+
+int size = GetNumber("Введите размер массива: ");
+int[] numbers = CreateArray(size);
+System.Console.WriteLine(Print(numbers));
+
+FillByUser(numbers);
+System.Console.WriteLine(Print(numbers));
+
+RevertArray(numbers);
+Console.WriteLine(Print(numbers));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
