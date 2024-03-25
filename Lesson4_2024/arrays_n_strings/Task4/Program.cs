@@ -9,13 +9,13 @@ System.Console.WriteLine("Введите срочку");
 string userInput = Console.ReadLine();
 
 string vowels = "aeiuo";
-int count= 0;
+int count = 0;
 
 foreach (var item in userInput)
 {
-if(vowels.Contains(item))
-{
-count++;
-}
+    if (vowels.Contains(item))
+    {
+        count++;
+    }
 }
 System.Console.WriteLine(count);
