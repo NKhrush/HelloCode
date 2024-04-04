@@ -12,35 +12,32 @@ void FillRandomArray(int[] collection, int index = 0)
 {
     
     if (index == collection.Length) return;
-    else 
-    {
+    
         collection[index] = new Random().Next(1, 10);
         index++;
         FillRandomArray(collection, index);
-    }
+    
 }
 
 void PrintArray(int[] array, int index = 0)
 {
 
     if (index == array.Length) return;
-    else
-    {
+   
         Console.Write(array[index++] + " ");
         PrintArray(array, index);
-    }
+    
 }
 
 void PrintArrayBackwards(int[] array, int index)
 {
 
     if (index == 0) return;
-    else
-    {
+    
         Console.Write(array[index-1] + " ");
         index = index - 1;
         PrintArrayBackwards(array, index);
-    }
+    
 }
 
 int[] array = CreateArray(5);
