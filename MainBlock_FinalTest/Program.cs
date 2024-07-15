@@ -24,3 +24,9 @@ for (int i = 0; i < input.Length; i++)
     }
 }
 
+Console.WriteLine();
+foreach (string s in newArray)
+{
+    Console.Write(s + " ");
+}
+
