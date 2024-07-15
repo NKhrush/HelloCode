@@ -10,3 +10,17 @@ for (int i = 0; i < input.Length; i++)
         newArrayLength++;
     }
 }
+
+// создание нового массива
+string[] newArray = new string[newArrayLength];
+newArrayLength = 0;
+
+for (int i = 0; i < input.Length; i++)
+{
+    if (input[i].Length <= 3)
+    {
+        newArray[newArrayLength] = input[i];
+        newArrayLength++;
+    }
+}
+
