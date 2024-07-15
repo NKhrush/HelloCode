@@ -1,40 +1,12 @@
-﻿string [] CreateArray(int size)
-    {
-        return new string [size];
-    }
+﻿
+Console.WriteLine("Введите строки через пробел:");
+string[] input = Console.ReadLine().Split(' ');
 
-void FillByUser(string[] array)
-    {
-        int size = array.Length;
-
-        int index = 0;
-
-        while (index < size)
-        {
-            array[index] = GetSymbol("Введите " + index + " элемент: ");
-            index++;
-        }
-    }
-
-string GetSymbol (string text)
-    {
-        System.Console.WriteLine(text);
-        return Console.ReadLine();
-    }
-
-void PrintArray(string[] array)
+int newArrayLength = 0; // длина нового массива
+for (int i = 0; i < input.Length; i++)
 {
-    for (int i = 0; i < array.Length; i++)
+    if (input[i].Length <= 3)
     {
-        Console.Write($"{array[i]} ");
+        newArrayLength++;
     }
-    Console.WriteLine();
 }
-
-
-Console.WriteLine ("Введите размер массива: ");
-int str =  Convert.ToInt32 (Console.ReadLine());
-string [] array = CreateArray (str);
-FillByUser(array);
-Console.WriteLine ("Первоначальный массив: ");
-PrintArray(array);
